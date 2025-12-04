@@ -1,0 +1,532 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kerala - God's Own Land</title>
+
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="CSS/lightbox.min.css">
+  <link rel="stylesheet" href="CSS/my_CSS_1_carousel.css">
+  <link rel="stylesheet" href="CSS/my_CSS_2_navbar.css">
+  <link rel="stylesheet" href="CSS/my_CSS_3_pc_navbar.css">
+  <link rel="stylesheet" href="CSS/my_CSS_4_main.css">
+  <link rel="stylesheet" href="CSS/my_CSS_5_comment_section.css">
+  <link rel="stylesheet" href="CSS/my_CSS_6_action_icons.css">
+  <link rel="stylesheet" href="CSS/my_CSS_7_footer.css">
+  <link rel="stylesheet" href="CSS/my_CSS_8_login_modal.css">
+  <link rel="stylesheet" href="CSS/my_CSS_9_Section_navigator.css">
+  <link rel="stylesheet" href="CSS/my_CSS_10_main_parallax.css">
+  
+  
+ 
+  
+</head>
+
+<body>
+  <!--Skip to main message-->
+  <div class="skip-trigger"></div>
+  <a href="#main" class="skip" aria-label="skip to main" tabindex="0">Skip to Main Content</a>
+    
+  <!--welcome toast message -->
+  <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
+    <div id="welcomeToast" class="toast" role="alert">
+      <div class="toast-header">
+            <button type="button" class="btn-close btn-close-custom" aria-label="Close" title="Close"
+              data-bs-dismiss="toast"></button>
+          </div>
+      <div class="toast-body text-center">
+        <img src="Images/Google_noto_folded_hand_emoji_1f64f.gif" alt="Namaskaar" style="width: 50px;">
+        <p class="mb-0">Welcome to Kerala - God's Own Land!</p>
+      </div>
+    </div>
+  </div>
+  <!-- Row 1: Centered Image -->
+  <div class="container-fluid" id="top_image_container">
+    <div class="row" id="top_image_row">
+      <div class="col-2 col-sm-2 mx-auto d-flex justify-content-center rounded-2" id="top_middle_image_container">
+        <img src="Images/Kathakali_open_eye.png" alt="kathakali face">
+      </div>
+    </div>
+  </div>
+  <!-- PC Header (hidden on mobile) -->
+  <header class="container-fluid d-xl-block pc-header mt-1 mt-xl-0" id="pcHeader">
+  <div class="row align-items-stretch" id="pcHeaderLayoutRow">
+    <!-- Left Column - 75% -->
+    <div class="col-9 pc-left-col">
+      <h1 id="pcMainHeading"><em><b>Kerala - God's Own Land</b></em></h1>
+    </div>
+    <!-- Right Column - 25% -->
+    <div class="col-3 pc-image-col h-auto"><img class="img-above" src="Images/Kathakali_open_eye.png" alt="kathakali face">
+      <img class="img-below" src="Images/Kathakali_closed_eye.png" alt="kathakali face close eyes"></div>
+  </div>
+  
+  <!-- Mobile Navigation row -->
+  <div class="row">
+    <nav id="mobileNavContainer" class="navbar navbar-expand-xl bg-success navbar-dark my-custom-navbar">
+      <div class="container-fluid" id="mobileTabletNavBar">
+
+        <!-- HomeIcon (My homemade home icon) -->
+
+        <div class="col-2 d-xl-none d-flex justify-content-center">
+          <a class="navbar-brand" id="homeIcon" href="#">
+            <img src="My_created_icons/my_open_house-cream.svg" alt="home icon" title="go to home"> </a>
+        </div>
+
+        <!-- Search Box (Center - takes most space) -->
+          <div class="col-6">
+            <div class="input-group input-group-sm" id="searchBoxGroup">
+              <input type="text" class="form-control" placeholder="Search..." aria-label="search for content"> <span class="input-group-text bg-white">
+              <!--image from bootstrap icons-->
+              <img src="Icons/search.svg" alt="search icon"> </span>
+              <span class="input-group-text bg-white">
+              <!--cancel button-->
+              <button class="btn btn-danger" id="navbarCrossButton" type="button" aria-label="close" title="Close">X</button>
+            </span>
+            </div>
+          </div>
+        
+
+        <!-- Hamburger Menu -->
+
+        <div class="col-2 d-flex justify-content-center">
+          <button id="hamburgerMenu" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar">
+            <img src="My_created_icons/my_hamburger_menu.svg" alt="hamburger menu" title="click to open menu"> </button>
+        </div>
+      </div>
+
+      <!-- Collapsible menu links -->
+
+      <div class="collapse navbar-collapse  text-start px-3" id="collapsibleNavbar"> 
+        <ul class="navbar-nav vertical-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="festivals.html" aria-label="Go to FestivalPage">Festivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wildlife.html" aria-label="Go to wildlife Page">Wildlife</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" aria-label="login/signupPage">Login/Signup</a>
+          </li>
+        </ul>
+      </div>      
+
+    </nav>
+  </div>
+  </header>
+  <!--Carousel container things-->
+  <div class="container-fluid mt-4 position-relative">
+    <!-- Close button -->
+    <button aria-label="Close" title="Close" id="closeCarousel"></button>
+    <button aria-label="refresh" title="refresh" id="refreshCarousel" style="display: none;"><img
+        src="Icons/arrow-clockwise.svg" alt="refresh_arrow"></button>
+    <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="true">
+
+      <!-- Indicators -->
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="go to slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="go to slide 2"></button>
+        <button type=button data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="go to slide 3"></button>
+        <button type=button data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="go to slide 4"></button>
+        <button type=button data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="go to slide 5"></button>
+        <button type=button data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="go to slide 6"></button>
+      </div>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-image">
+            <img src="Images/960px-Kerala_boatrace_800x450.png" alt="Boat race">
+          </div>
+          <div class="carousel-caption">
+            <h2>Boat race</h2>
+            <p>Boat race at a festival!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image"><img src="Images/Neel_kuranji_1994_bg_800x450.png" alt="Neelakurinji blooms">
+          </div>
+          <div class="carousel-caption">
+            <h2>Neelakurinji blooms</h2>
+            <p>At Munnar valley every 12yrs!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image"><img
+              src="Images/periyar-wildlife-sanctuary-1721320368_2be8dc92f07d8de53500_800x450.png" alt="Elephants"> 
+          </div>
+          <div class="carousel-caption">
+            <h2>Elephants</h2>
+            <p>Periyar Wildlife Sanctuary!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image"><img
+              src="Images/pexels-jithinmurali-8566097_800x450.png" alt="Kathakali_dance_pair"> 
+          </div>
+          <div class="carousel-caption">
+            <h2>Kathakali dance</h2>
+            <p>A pair enacting in Kathakali art-form</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image"><img
+              src="Images/parambikulam-1729246537_6b914088042425034ff8_800x450.png" alt="Parambikulam Tiger Reserve"> 
+          </div>
+          <div class="carousel-caption">
+            <h2>Parambikulam Tiger Reserv</h2>
+            <p>A place of lush green valley</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image"><img
+              src="Images/Poovar_Beach_800x450.png" alt="Poovar_Beach"> 
+          </div>
+          <div class="carousel-caption">
+            <h2>Poovar Beach</h2>
+            <p>Pokkumoosapuram-island of golden sands</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <!-- Completely changed structure -->
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span> <!-- sr-only is visually-hidden -->
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <main id="main">
+    <!-- Page Title -->
+    <div class="container-fluid mt-3">
+      <h1 id="mainHeading">Kerala - God's Own Land</h1>
+      <div class="container-sm" id="mainParagraph">
+        <p>
+          Nestled in the heart of India's cultural tapestry, Kerala stands as a beacon of rich heritage and timeless traditions. Renowned for its serene backwaters, intricate network of lagoons and lakes, and lush hill stations, it presents a unique blend of natural beauty and vibrant culture. This land is also famous for its distinct traditions, from the rhythmic Kathakali dance to the powerful martial art of Kalaripayattu. Often called "God's Own Country," Kerala's high literacy rate and progressive social indicators set it apart, making it a model for development. Its cuisine, rich with coconuts and spices, and the annual spectacle of the monsoon further define its enchanting character.
+        </p>
+      </div>
+      <!-- Section 1: History -->
+      <section class="container-fluid mt-3">
+        <div class="row justify-content-around align-items-center">
+          <div class="container-sm col-md-6" id="section1">
+          <h2>1. History</h2>
+          <p>
+            Based on ancient Tamil Sangam literature and indigenous traditions, Kerala's history is distinct from much of India. The region was historically ruled by the Chera dynasty, with Muziris serving as a major port for trade with Romans, Greeks, and Arabs.</p>
+          <p>
+            A significant turning point was the arrival of Saint Thomas the Apostle in 52 CE, who established one of the world's oldest Christian communities. Unlike the North, Kerala experienced little Islamic conquest; instead, Islam arrived peacefully through Arab traders in the 7th century.</p>
+          <p>
+            The medieval period saw the rise of powerful Nair kingdoms. European colonial influence began with Vasco da Gama's 1498 landing, leading to Portuguese, Dutch, and finally British control. Kerala avoided the feudal system common elsewhere, with land reforms and social movements in the 19th and 20th centuries paving the way for its modern progressive society. The state was formally created in 1956 by merging Malayalam-speaking regions.</p>
+
+        </div>
+
+        <div class="container-sm col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="Images/960px-De_Lannoy_Surrender_600x400.png" alt="surrender of dutch commander in battle of Colachel">
+            <div class="card-body text-center">
+              <h3 class="card-title">Colonialism and Resistance</h3>
+              <p class="card-text">Surender of Dutch commanderDe Lannoy to the legendary kind <b>Marthanda Varma</b> following Battle of Colachel(1741.</p>
+              <a href="https://en.wikipedia.org/wiki/History_of_Kerala#/media/File:De_Lannoy_Surrender.JPG" class="btn btn-primary" aria-label="link to history iamge" target="_blank">By Infocaster at en-Wikipedia</a>
+              
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <!-- Do You Know Section -->
+      <section class="container-fluid d-flex justify-content-center mt-5" id="jumbo">
+        <div class="col-12 col-md-6 bg-primary text-white p-3 rounded-3" id="jumboHome">
+          <h2 class="display-12 text-center">🌴 Did You Know?</h2>
+          <ul class="list-unstyled fs-5">
+            <li>✅ Kerala has 100% literacy rate</li>
+            <li>✅ First state to receive monsoon in India</li>
+            <li>✅ Known as "God's Own Country"</li>
+            <li>✅ HDI(0.758) of Kerala is highest in India</li>
+            <li>✅ Birthplace of Ayurvedic medicine</li>
+          </ul>
+        </div>
+      </section>
+      <section class="container-fluid mt-3">
+        <div class="row justify-content-around">
+          <div class="container-sm order-md-2 col-md-6" id="section2">
+          <h2>2. Geography</h2>
+            <p>
+            Kerala's geography is defined by a unique tripartite structure running north to south. The eastern region is dominated by the rugged Western Ghats, a UNESCO World Heritage Site and biodiversity hotspot. These mountains, with peaks like Anamudi, the highest in South India, are the source of numerous rivers and are covered in dense evergreen and deciduous forests teeming with wildlife.
+            </p>
+            <p>The central midlands comprise rolling hills and valleys, which form the heartland of Kerala's agricultural activity, including extensive tea, coffee, and spice plantations. The land then slopes downward to the coastal plain in the west, a contiguous stretch fringed by palm-fringed beaches along the Arabian Sea.</p><p>Intersecting these regions is a network of 44 rivers and the famed backwaters, a chain of brackish lagoons and lakes lying parallel to the coast. This intricate system, exemplified by the Vembanad Lake, is a defining feature of the state's landscape. The entire region experiences a tropical monsoon climate, with the Southwest Monsoon first arriving in Kerala, marking the commencement of the rainy season across the Indian subcontinent. This varied topography, from high mountains to a lengthy coastline, creates the state's distinct ecological zones.
+            </p>
+        </div>
+
+        <div class="container-sm order-md-1 col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="Images/Overview%20of%20Kerala%20geography_400x600.png" alt="Kerala Geography">
+            <div class="card-body text-center">
+              <h3 class="card-title">Geography of Kerala-An Overview</h3>
+              <p class="card-text">Part of deccan plateau elevating from east to west</p>
+              <a href="https://doi.org/10.5194/essd-12-2899-2020" class="btn btn-primary" aria-label="link to geography image" target="_blank">Source:Hao <em>et al</em>., 2020</a>
+              
+            </div>
+          </div>
+        </div></div>
+      </section>
+      <section class="container-fluid mt-3" aria-label="comment-section" id="commentSection">
+        <hr class="col-12" id="firstRuler">
+        <form action="/action_page.php">
+          <div class="mb-3 mt-3">
+            <label for="commentBox">
+              <img class="label-bg" src="My_created_icons/my_share_comment.svg" alt=""> <span class="label-text">Share
+                your comments:</span>
+            </label>
+            <textarea id="commentBox" class="form-control rounded-3" rows="5" name="text"
+              placeholder="your comment..."></textarea>
+          </div>
+          <input id="CommentSubmitBtn" type="button" class="btn btn-primary" value="Submit"> <button type="reset"
+            class="btn btn-danger">Clear</button>
+        </form>
+        <div class="toast sm col-md-4">
+          <div class="toast-header">
+            <button type="button" class="btn-close btn-close-custom" aria-label="Close"
+              data-bs-dismiss="toast"></button>
+          </div>
+          <div class="toast-body">
+            <img src="Images/Google_noto_folded_hand_emoji_1f64f.gif" alt="thank you emoji">
+            <p>Thank you for your comment!</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div></div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="container-fluid mt-3 quick-actions">
+    <div id="quicActionsRow" class="row">
+      <div class="col-3 text-center">
+        <button type="button" class="btn" title="copy">
+          <img src="My_created_icons/my_emptyCopyICon.svg" alt="copy" class="copy-normal" title="copyContent"><img
+            src="My_created_icons/my_fillCopyIcon.svg" alt="copied" class="copy-active"> </button>
+      </div>
+      <div class="col-3 text-center"><button type="button" class="btn" title="like">&#128077;</button></div>
+      <div class="col-3 text-center">
+        <button type="button" class="btn" title="share"><img src="Icons/share-fill-cream.svg" alt="share"></button>
+      </div>
+      <div class="col-3 text-center">
+        <button type="button" class="btn" title="home-goto-top">
+          <img src="My_created_icons/my_home_goToTop.svg" alt="go to top" class="homeGoToTop-normal"><img
+            src="Icons/house-fill-cream.svg" alt="came to home" class="home-active"> </button>
+      </div>
+    </div>
+  </div>
+  <!--pagination divs-->
+  <div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+      <div class="col-auto" id="pagination"></div>
+    </div>
+  </div>
+  <!--Footer menu accordion-->
+  <footer class="footer accordion-flush mt-0 py-0">
+    <div class="accordion my-custom-accordion" id="footerAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="copyright">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#copyrightContent"
+            aria-expanded="true" aria-controls="copyrightContent">
+            @Copyright
+          </button>
+        </h2>
+        <div id="copyrightContent" class="accordion-collapse collapse" 
+          data-bs-parent="#footerAccordion">
+          <div class="accordion-body">
+            @Copyright: 2025-2030
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="disclaimer">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#disclaimerContent" aria-expanded="false" aria-controls="disclaimerContent">
+            Disclaimer
+          </button>
+        </h2>
+        <div id="disclaimerContent" class="accordion-collapse collapse" 
+          data-bs-parent="#footerAccordion">
+          <div class="accordion-body">
+            <p><b><em>Disclaimer:</em></b>This page was created by an Anonymous student based on the guidance and extellent
+              mentoring by <a href="https://www.si.umich.edu/people/colleen-van-lent">Dr. Colleen van Lent</a> for the
+              <a href="https://www.coursera.org/specializations/web-design"><b> Web Design for Everybody</b></a>.Anyone
+              interested in learning web-design is encouraged to learn from it.
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="credits">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#creditsContent" aria-expanded="false" aria-controls="creditsContent">
+            Credits
+          </button>
+        </h2>
+        <div id="creditsContent" class="accordion-collapse collapse" 
+          data-bs-parent="#footerAccordion">
+          <div class="accordion-body">
+            <blockquote class="blockquote-footer">Coursera <a href="https://www.coursera.org/specializations/web-design/" aria-label="Coursera webdesign course" target="_blank" rel="noopener noreferrer">WdFE course</a> by Michighan University.</blockquote>
+            <blockquote class="blockquote-footer"><a href="https://lokeshdhakar.com/projects/lightbox2/" aria-label="Lightbox 2  by Lokesh Dhakar" target="_blank" rel="noopener noreferrer">LIGHTBOX</a> by Lokesh Dhakar &copy; <a href="https://raw.githubusercontent.com/lokesh/lightbox2/master/LICENSE" aria-label="MIT license" target="_blank" rel="noopener noreferrer">MIT license.</a> </blockquote>
+            <blockquote class="blockquote-footer"><a href="https://www.keralatourism.org" aria-label="Kerala Tourism dot org" target="_blank" rel="noopener noreferrer">&copy; Kerala tourism</a> All carousel images were taken from Kerala tourism.org website.</blockquote>
+            <blockquote class="blockquote-footer"><a href="https://www.pexels.com/" aria-label="Pexels.com" target="_blank" rel="noopener noreferrer">&copy; Pexels.com</a> and <a href="https://www.flickr.com/" aria-label="Flicr.com" target="_blank" rel="noopener noreferrer">&copy; Flickr.com</a>. All free images taken from these two websites have been adqeuately given credits at respective places.</blockquote>
+            <blockquote class="blockquote-footer">A few images were taken from <a href="https://www.wikipedia.org/" aria-label="Wikipedia.org" target="_blank">Wikipedia.org</a> and <a href="https://commons.wikimedia.org/wiki/Main_Page" aria-label="Wikimedia commons dot org" target="_blank" rel="noopener noreferrer">Wikimedia commons</a>. All the images were adequately given credits at respective places.</blockquote>
+            <blockquote class="blockquote-footer">Wood-texture image for border in card, is by <a href="https://pixabay.com/users/indigo432-4156390/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1943836" target="_blank" aria-label="Indigo432">Indigo432</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1943836" aria-label="Pixabay" target="_blank">Pixabay</a></blockquote>
+            
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="contactUs">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#contactInfo" aria-expanded="false" aria-controls="contactInfo">
+            Contact us
+          </button>
+        </h2>
+        <div id="contactInfo" class="accordion-collapse collapse" 
+          data-bs-parent="#footerAccordion">
+          <div class="accordion-body">
+            To contact please fill up the signup fom or login to see the contact information, or click on the social media icons.
+            <div class="row justify-content-center mt-3">
+              <div class="col-3 text-center">
+                <button type="button" class="btn" title="Facebook">
+                  <img src="Icons/facebook.svg" alt="Facebook"> </button>
+              </div>
+              <div class="col-3 text-center">
+                <button type="button" class="btn" title="Instagram">
+                  <img src="Icons/instagram.svg" alt="Instagram"> </button>
+              </div>
+              <div class="col-3 text-center">
+                <button type="button" class="btn" title="WhatsApp">
+                  <img src="Icons/whatsapp.svg" alt="WhatsApp"> </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--CSS validator batch-->
+  <div class="text-center mt-3">
+    <p>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!">
+      </a>
+    </p>
+  </div>
+
+  </footer>
+  
+  <!--modal div for login signup form-->
+  <div class="modal fade" id="loginModal" tabindex="-1"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="loginModalLabel">Login / Sign Up</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="userName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="userEmail" placeholder="Enter your email" required>
+                    </div>
+                    <!-- Buttons in a row -->
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary flex-fill">Submit</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+              <!-- Accessibility instructions -->
+                <div class="mt-3 p-2 bg-light rounded small">
+                  <strong>Accessibility:</strong> Press ESC key or click your name button at any time to <b>logout</b> if you're logged in.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <small class="text-muted">We'll never share your information with anyone else.</small>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas Navigator -->
+  <div class="offcanvas offcanvas-bottom custom-offcanvas h-auto" id="sectionNavigator" aria-modal="true" role="dialog" data-bs-scroll="true">
+    <div class="offcanvas-header" data-bs-theme="dark">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close" title="close section navigator"></button>
+    </div>
+    <div class="offcanvas-body d-flex justify-content-evenly">
+
+      <!-- Title/Main -->
+      <a href="#main" class="dot-item text-decoration-none text-center" aria-label="Jump to main section">
+        <span class="dot"></span>
+        <span class="dot-label">Title</span>
+      </a>
+
+      <!-- Section 1 -->
+      <a href="#section1" class="dot-item text-decoration-none text-center" aria-label="Jump to History section">
+        <span class="dot"></span>
+        <span class="dot-label">History</span>
+      </a>
+
+      <!-- Section 2 -->
+      <a href="#section2" class="dot-item text-decoration-none text-center" aria-label="Jump to Geography section">
+        <span class="dot"></span>
+        <span class="dot-label">Geography</span>
+      </a>
+
+      <!-- Section 3/Comment section -->
+      <a href="#commentSection" class="dot-item text-decoration-none text-center" aria-label="Jump to Comments section">
+        <span class="dot"></span>
+        <span class="dot-label">Comments</span>
+      </a>
+
+    </div>
+  </div>
+  <button class="btn position-fixed d-block" data-bs-toggle="offcanvas" data-bs-target="#sectionNavigator" id="offcampusButtonRight" aria-label="Open section navigation" aria-controls="sectionNavigator" title="Click to open section navivtor">
+  <img src="My_created_icons/my_right_arrow_fil_circle.svg" alt="Section-Navigtor">
+  </button>
+    
+
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <script src="JS/lightbox-plus-jquery.min.js"></script>
+
+  <script src="JS/my_js_8_mylighbox2_modification.js"></script>
+  <script src="JS/my_js_1_navbar.js"></script>
+  <script src="JS/my_js_2_searchBox.js"></script>
+  <script src="JS/my_js_3_login_modal.js"></script>
+  <script src="JS/my_js_4_carousel.js"></script>
+  <script src="JS/my_js_5_comment_section_action_icons.js"></script>
+  <script src="JS/my_js_6_pagination_footer.js"></script>
+  <script>document.getElementById("pagination").innerHTML = renderPagination("1");</script>
+  <script src="JS/my_js_7_section_navigator.js"></script>
+  
+  <script src="JS/my_js_9_main_parallax.js"></script>
+
+
+
+  
+
+</body>
+
+</html>

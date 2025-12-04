@@ -1,0 +1,17 @@
+<svg
+    width="689"
+    height="159"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:space="preserve"
+    overflow="hidden">
+    <g transform="translate(-1433 -1669)">
+        <path
+            d="M1482.37 1672.22 1960.35 1671.5C2052.11 1699.33 2072.43 1735.38 2090.12 1755.31 2107.82 1775.24 2123.23 1823.48 2118.7 1825.5L1435.5 1825.5 1435.5 1726.31C1435.5 1696.43 1456.48 1672.22 1482.37 1672.22Z"
+            stroke="#0b0f15"
+            stroke-width="4.58333"
+            stroke-miterlimit="8"
+            fill="hsl(120, 95%, 19%)"
+            fill-rule="evenodd" />
+    </g>
+</svg>

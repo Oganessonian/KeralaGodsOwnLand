@@ -1,0 +1,83 @@
+.comment-label {
+    position: relative;
+    display: inline-block;
+}
+
+.label-bg {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+}
+
+.label-text {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    filter: brightness(1) contrast(1.5);
+    padding: 5px 10px 0 10px;
+    display: block;
+    font-size: 1.1rem;
+}
+
+#commentBox {
+    border: 2px solid #014201; /* Your green color */
+    border-radius: 5px; /* Optional: matches your theme */
+}
+
+.toast {
+    border: 2px solid #014201;
+    border-radius: 5px;
+}
+
+.toast-body img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.toast-body p {
+    display: inline-block;
+    vertical-align:text-top;
+    font-size: 1.2rem;
+}
+
+.btn-close-custom {
+    position: relative;
+    background: hsl(0, 82%, 52%);
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 1;
+}
+
+.btn-close-custom::before,
+.btn-close-custom::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.8rem;
+    height: 0.2rem;
+    background: black;
+}
+
+.btn-close-custom::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-close-custom::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.toast-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#firstRuler{
+    border: 2px solid #000501;
+    border-radius: 3px;
+    opacity: 1;
+}

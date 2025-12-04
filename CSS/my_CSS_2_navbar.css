@@ -1,0 +1,244 @@
+/*search box */
+
+#searchBoxGroup {
+    height: 2.5rem;
+    line-height: normal;
+}
+#searchBoxGroup img {
+    cursor: pointer;
+    height: 2.0rem;
+    border: 2px solid transparent; /* Prepare for hover border */
+}
+
+#searchBoxGroup img:hover{
+    border-color: hsl(260, 75%, 51%) !important; /*purple border on hover */
+    background-color: hsl(125, 75%, 51%) !important; /* light green red on hover */
+}
+
+/* Ensure all nav bar items have same height and vertical alignment */
+
+
+#mobileTabletNavBar {
+    display: flex;
+    align-items: center !important;
+    height: fit-content;
+}
+
+#searchBoxGroup #navbarCrossButton {
+    border: 2px solid hsl(131, 58%, 13%) !important;
+    border-radius: 4px;
+    height: 2.0rem;
+    width: 2.0rem;
+    padding: 0;
+    font-size: 1.0rem;
+}
+
+#navbarCrossButton:hover{
+    border-color: hsl(48, 87%, 72%) !important; /* Gold border on hover */
+    background-color: hsl(260, 75%, 51%) !important; /* Darker red on hover */
+}
+
+#homeIcon img,
+#hamburgerMenu img, .home-icon-btn img {
+    height: 2.5rem; /* To adjust home icon heith */
+    min-width: 40px; /* Minimum clickable area */
+}
+
+.home-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+/**/
+/*These are just identification marks*/
+
+.comic-dialogue {
+  position:relative;
+  background: white;
+  border: 3px solid black;
+  border-radius: 10% 10% 50% 50%;
+  padding: 10px 15px;
+    margin-left: 1.5rem;
+    text-align: center;
+    z-index: 1000;
+    animation: popIn 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes popIn {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+.hidden { display: none; }
+
+.comic-dialogue #dialogueCloseBtn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    border-radius: 50%;
+    background: #ff0000;
+    border: #000000;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 0;
+    cursor: pointer;
+    line-height: 1;
+}
+
+
+
+
+/**/
+/* Dark Navbar */
+.my-custom-navbar {
+    /*background-color: #108272 !important;*/
+    background-color: #0e3415 !important;
+}
+/*
+
+.my-custom-navbar .navbar-brand {
+    color: #e2e8f0 !important;
+    font-weight: bold;
+}
+*/
+
+.vertical-menu {
+    width: 180px !important;
+    margin-left: auto !important;
+    background: hsl(34, 91%, 95%);
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.24);
+    padding: 6px 0;
+}
+
+.vertical-menu .nav-link {
+    padding: 12px 16px !important;
+    margin: 4px 8px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    background-color: hsl(131, 58%, 13%); /* Green like your original buttons */
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.my-custom-navbar .nav-link {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.my-custom-navbar .nav-link:hover {
+    color: #ffffff !important;
+    background: red !important;
+    transform: translateY(-2px);
+}
+
+.my-custom-navbar .nav-link.active {
+    color: hsl(2, 95%, 54%) !important;
+    font-weight: bolder !important;
+}
+
+/* Toggler for dark navbar */
+.my-custom-navbar .navbar-toggler {
+    border: none;
+}
+/* Special style for Login/Signup */
+.vertical-menu .nav-link[aria-label="login/signupPage"] {
+    background-color: #115c6a; /* Info color like your original */
+}
+
+.my-custom-navbar .nav-link[aria-label="login/signupPage"]:hover {
+    background-color: #adf3be !important;
+     color: #000000!important;
+}
+
+/* Smaller size of search box items for very tiny screens */
+@media (max-width: 350px) {
+    #searchBoxGroup img {
+        height: 1.2rem;
+    }
+    
+   #searchBoxGroup #navbarCrossButton {
+        height: 1.2rem;
+        width: 1.2rem;
+        font-size: 0.6rem;
+    }
+}
+
+
+/* Tablet and ipad only: 768px to 1200px */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    
+    header {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+  }
+    #collapsibleNavbar {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        height: auto;
+        width: max-content;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        display: flex;
+        background: hsl(131, 58%, 13%) !important;
+        transform: translateY(-50%) translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 9999;
+        padding: 1rem;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #collapsibleNavbar.show {
+        transform: translateY(-50%) translateX(0);
+    }
+    #mobileTabletNavBar {
+        align-items: center !important;
+        height: fit-content;
+        display: flex;
+    }
+    #mobileTabletNavBar {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobileTabletNavBar > div:nth-child(1) {
+        /* Home icon */
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #mobileTabletNavBar > div:nth-child(2) {
+        /* Search box */
+        flex: 2; /* Takes more space */
+        display: flex;
+        justify-content: center
+        
+    }
+
+    #mobileTabletNavBar > div:nth-child(3) {
+        /* Hamburger */
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+    #top_image_container{
+        background-color: #3498f0;
+        
+    }
+    #top_middle_image_container{
+        background-color: antiquewhite;
+    }
+}
+
+

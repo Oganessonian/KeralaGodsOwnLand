@@ -1,0 +1,51 @@
+/*Offcampus for section navigator*/
+/* Dot styles */
+
+#offcampusButtonRight {
+    position: fixed;
+    bottom: 5rem;
+    left: 4px;
+    margin-left: -2rem;
+    height: 3rem;
+    width: auto;
+    z-index: 9999;
+}
+
+#offcampusButtonRight img {
+    height: 3rem;
+    width: auto;
+}
+
+.dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid hsl(55, 95%, 50%); /* Your theme color */
+    border-radius: 50%;
+    margin: 0 auto 5px;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: hsl(0, 96%, 52%);
+  border: none;
+}
+
+.dot-item:hover .dot {
+    transform: scale(1.2);
+    background-color: white;
+    
+}
+
+/* Mobile: Bottom offcanvas, hide labels */
+.custom-offcanvas {
+    height: fit-content;
+    background-color: #0e4f30;
+  
+}
+
+.dot-label {
+  font-size: 0.875rem;
+  color: hsl(0, 0%, 100%);
+}
+

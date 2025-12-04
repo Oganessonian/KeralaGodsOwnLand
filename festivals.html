@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kerala - Festivals</title>
+
+
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="CSS/lightbox.min.css">
+  <link rel="stylesheet" href="CSS/my_CSS_1_carousel.css">
+  <link rel="stylesheet" href="CSS/my_CSS_2_navbar.css">
+  <link rel="stylesheet" href="CSS/my_CSS_3_pc_navbar.css">
+  <link rel="stylesheet" href="CSS/my_CSS_4_main.css">
+  <link rel="stylesheet" href="CSS/my_CSS_5_comment_section.css">
+  <link rel="stylesheet" href="CSS/my_CSS_6_action_icons.css">
+  <link rel="stylesheet" href="CSS/my_CSS_7_footer.css">
+  <link rel="stylesheet" href="CSS/my_CSS_8_login_modal.css">
+  <link rel="stylesheet" href="CSS/my_CSS_9_Section_navigator.css">
+  <link rel="stylesheet" href="CSS/my_CSS_10_main_parallax.css">
+  
+</head>
+
+<body>
+  
+  <!--Skip to main message-->
+  <div class="skip-trigger"></div>
+  <a href="#main" class="skip" aria-label="skip to main" tabindex="0">Skip to Main Content</a>
+    
+  <!--welcome toast message -->
+  <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
+    <div id="welcomeToast" class="toast" role="alert">
+      <div class="toast-header">
+            <button type="button" class="btn-close btn-close-custom" aria-label="Close" title="Close"
+              data-bs-dismiss="toast"></button>
+          </div>
+      <div class="toast-body text-center">
+        <img src="Images/Google_noto_folded_hand_emoji_1f64f.gif" alt="Namaskaar" style="width: 50px;">
+        <p class="mb-0">Welcome to Kerala - God's Own Land!</p>
+      </div>
+    </div>
+  </div>
+  <!-- Row 1: Centered Image -->
+  <div class="container-fluid" id="top_image_container">
+    <div class="row" id="top_image_row">
+      <div class="col-2 col-sm-2 mx-auto d-flex justify-content-center rounded-2" id="top_middle_image_container">
+        <img src="Images/Kathakali_open_eye.png" alt="kathakali face">
+      </div>
+    </div>
+  </div>
+  <!-- PC Header (hidden on mobile) -->
+  <header class="container-fluid d-xl-block pc-header mt-1 mt-xl-0" id="pcHeader">
+  <div class="row align-items-stretch" id="pcHeaderLayoutRow">
+    <!-- Left Column - 75% -->
+    <div class="col-9 pc-left-col">
+      <h1 id="pcMainHeading"><em><b>Kerala - Festivals</b></em></h1>
+    </div>
+    <!-- Right Column - 25% -->
+    <div class="col-3 pc-image-col h-auto"><img class="img-above" src="Images/Kathakali_open_eye.png" alt="kathakali face">
+      <img class="img-below" src="Images/Kathakali_closed_eye.png" alt="kathakali face close eyes"></div>
+  </div>
+  
+  <!-- Mobile Navigation row -->
+  <div class="row">
+    <nav id="mobileNavContainer" class="navbar navbar-expand-xl bg-success navbar-dark my-custom-navbar">
+      <div class="container-fluid" id="mobileTabletNavBar">
+
+        <!-- HomeIcon (My homemade home icon) -->
+
+        <div class="col-2 d-xl-none d-flex justify-content-center">
+          <button class="navbar-brand home-icon-btn" id="homeIcon" aria-label="Home information">
+            <img src="My_created_icons/my_open_house-cream.svg" alt="Home icon" title="go to home">
+          </button>
+          <div class="comic-dialogue hidden" id="comicBox">
+            <button class="close-btn" aria-label="Close" id="dialogueCloseBtn">&times;</button><p>Sorry, not your home!<br>Go to Hamburger &rarr; &#9776;</p></div>
+        </div>
+
+
+        <!-- Search Box (Center - takes most space) -->
+          <div class="col-6">
+            <div class="input-group input-group-sm" id="searchBoxGroup">
+              <input type="text" class="form-control" placeholder="Search..." aria-label="search for content"> <span class="input-group-text bg-white">
+              <!--image from bootstrap icons-->
+              <img src="Icons/search.svg" alt="search icon"> </span>
+              <span class="input-group-text bg-white">
+              <!--cancel button-->
+              <button class="btn btn-danger" id="navbarCrossButton" type="button" aria-label="close" title="Close">X</button>
+            </span>
+            </div>
+          </div>
+        
+
+        <!-- Hamburger Menu -->
+
+        <div class="col-2 d-flex justify-content-center">
+          <button id="hamburgerMenu" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar">
+            <img src="My_created_icons/my_hamburger_menu.svg" alt="hamburger menu" title="click to open menu"> </button>
+        </div>
+      </div>
+
+      <!-- Collapsible menu links -->
+
+      <div class="collapse navbar-collapse  text-start px-3" id="collapsibleNavbar"> 
+        <ul class="navbar-nav vertical-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" aria-label="Go to home page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="festivals.html" aria-current="page">Festivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wildlife.html" aria-label="Go to wildlife Page">Wildlife</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal" aria-label="login/signupPage">Login/Signup</a>
+          </li>
+        </ul>
+      </div>      
+
+    </nav>
+  </div>
+  </header>
+  <!--Carousel container things-->
+  <div class="container-fluid mt-4 position-relative">
+    <!-- Close button -->
+    <button aria-label="Close" title="Close" id="closeCarousel"></button>
+    <button aria-label="refresh" title="refresh" id="refreshCarousel" style="display: none;"><img
+        src="Icons/arrow-clockwise.svg" alt="refresh_arrow"></button>
+    <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="true">
+
+      <!-- Indicators -->
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="go to slide 1" class="active"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="go to slide 2"></button>
+        <button type=button data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="go to slide 3"></button>
+        <button type=button data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="go to slide 4"></button>
+        <button type=button data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="go to slide 5"></button>
+        <button type=button data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="go to slide 6"></button>
+      </div>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-image">
+            <img src="Images/960px-Kerala_boatrace_800x450.png" alt="Boat race">
+          </div>
+          <div class="carousel-caption">
+            <h2>Boat race</h2>
+            <p>Boat race at a festival!</p>
+          </div>
+
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image"><img src="Images/Neel_kuranji_1994_bg_800x450.png" alt="Neelakurinji blooms">
+          </div>
+          <div class="carousel-caption">
+            <h2>Neelakurinji blooms</h2>
+            <p>At Munnar valley every 12yrs!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image"><img
+              src="Images/periyar-wildlife-sanctuary-1721320368_2be8dc92f07d8de53500_800x450.png" alt="Elephants"> 
+          </div>
+          <div class="carousel-caption">
+            <h2>Elephants</h2>
+            <p>Periyar Wildlife Sanctuary!</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image"><img
+              src="Images/pexels-jithinmurali-8566097_800x450.png" alt="Kathakali_dance_pair"> 
+          </div>
+          <div class="carousel-caption">
+            <h2>Kathakali dance</h2>
+            <p>A pair enacting in Kathakali art-form</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image"><img
+              src="Images/parambikulam-1729246537_6b914088042425034ff8_800x450.png" alt="Parambikulam Tiger Reserve"> 
+          </div>
+          <div class="carousel-caption">
+            <h2>Parambikulam Tiger Reserve</h2>
+            <p>A place of lush green valley</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-image"><img
+              src="Images/Poovar_Beach_800x450.png" alt="Poovar_Beach"> 
+          </div>
+          <div class="carousel-caption">
+            <h2>Poovar Beach</h2>
+            <p>Pokkumoosapuram-island of golden sands</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <!-- Completely changed structure -->
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span> <!-- sr-only is visually-hidden -->
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <main id="main">
+    <!-- Page Title -->
+    <div class="container-fluid mt-3">
+      <h1 id="mainHeading">Kerala - Festivals</h1>
+      <div class="container-sm" id="mainParagraph">
+        <p>
+          Kerala's festivals form a vibrant mosaic of its multicultural identity, where Hindu, Christian, and Muslim celebrations coexist with equal fervor. This cultural harmony transforms the state into a perpetual venue of colorful processions, rhythmic music, and shared joy. From ancient temple rituals to church feasts and mosque celebrations, each event showcases unique artistic expressions while strengthening community bonds. These festivals transcend mere religious observance, becoming spectacular social gatherings that highlight Kerala's renowned performing arts, elaborate decorations, and collective spirit. The state's calendar remains perpetually bright with celebrations that reflect its secular ethos and deep-rooted traditions.
+        </p>
+      </div>
+      <!-- Section 1: Onam -->
+      <section class="container-fluid mt-3">
+        <div class="row justify-content-around align-items-center">
+        <div class="container-sm col-md-6" id="section1">
+          <h2>1. Onam</h2>
+          <p>
+            Onam stands as Kerala's most significant and joyous annual celebration, deeply rooted in the legend of the benevolent King Mahabali, whose reign is believed to have been a golden era of equality and prosperity. This ten-day harvest festival, usually falling between August and September, marks the homecoming of the revered king from the netherworld. The festivities commence with intricate Athapookalam—vibrant floral carpets crafted daily on the ground using diverse petals, which grow in complexity until the final day, Thiruvonam.</p>
+          <p>The highlight is the grand Onam Sadya, a lavish vegetarian feast served on a banana leaf, featuring over two dozen traditional dishes. The meal is a culinary masterpiece, with flavors ranging from the tangy Pulissery to the sweet Payasam. Vallamkali, the thrilling snake boat races, add to the spectacle, where long Chundan Vallams glide through waterways to the rhythm of energetic songs.</p>
+          <p> Traditional dances like Kaikottikali and Pulikali (tiger dance) further animate the celebrations. Beyond its mythological origins, Onam transcends religious boundaries, uniting all Keralites in a shared expression of cultural pride, gratitude for nature's bounty, and the enduring hope for a prosperous future.
+          </p>
+          </div>
+
+        <div class="container-sm col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="Images/pexels-lalu-_ua-6928295-18289221_400x600.png" alt="An Onapottan of Onam">
+            <div class="card-body text-center">
+              <h3 class="card-title">Onapottan during Onam</h3>
+              <p class="card-text">A 'silent' artist, during Utradam and Thiruvonam days of Onam, visits homes and blesses people for prosperity, as if <b>'Mahabali'</b> has arrived! Onapottan is a tradition of North Kerala. </p>
+              <a href="Images/pexels-lalu-_ua-6928295-18289221_400x600.png" aria-label="Onapottam image from lalu_ua @ Pexels" target="_blank" class="btn btn-primary">From lalu _ua @Pexels</a>
+              
+            </div>
+          </div>
+        </div></div>
+      </section>
+      <!-- Do You Know Section -->
+      <section class="container-fluid mt-5" id="jumbo">
+        <div class="col-8 mx-auto bg-danger text-white p-5 rounded-3" id="jumboFestivals">
+          <h2 class="display-12 text-center">🌴 Did You Know?</h2>
+          <ul class="list-unstyled fs-5">
+            <li>✅ St. Thomas, an Apostle of Jesus, first landed in Kodungallur, Kerala, in 52 CE</li>
+            <li>✅ Traditions say that a Kerala king, Cheraman Perumal, met <b>Prophet Muhammad</b>, and witnessed the splitting of the moon miracle.</li>
+            <li>✅ India's first mosque was built in Kerala in ~629 CE, when <b>Prophet</b> was alive.</li>
+            <li>✅ Vishu marks the Malayali New Year with a ritual feast (Sadhya).</li>
+            <li>✅ Theyyam rituals can involve over 400 unique divine forms.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="container-fluid mt-3">
+        <div class="row justify-content-around align-items-center">
+        <div class="container-sm col-md-6 order-md-2" id="section2">
+          <h2>2. Thrissur Pooram</h2>
+          <p>
+            Thrissur Pooram stands as Kerala's most spectacular temple festival, transforming Thrissur into a vibrant arena of cultural extravaganza. Centered around the Vadakkunnathan Temple, this Hindu celebration features a magnificent procession of caparisoned elephants adorned with golden headgear and ornate nettipattam. The festival's climax occurs when two rival groups present their ceremonial paraphernalia in a friendly yet competitive display. What truly distinguishes Pooram is the electrifying percussion ensemble—the madathil varavu—where hundreds of artists create thunderous rhythms using chenda, elathalam, and kombu. The night sky illuminates with dazzling fireworks that compete with the daytime's visual splendor. This grand celebration, dating back to the 18th century, attracts thousands of spectators who witness this magnificent synthesis of music, art, and religious devotion.
+          </p>
+        </div>
+
+        <div class="container-sm col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="Images/Thrissur_Pooram_1200x400.png" alt="Row of elephants at Thrissur pooram">
+            <div class="card-body">
+              <h3 class="card-title">Elephant ritual at Thrissue Pooram</h3>
+              <p class="card-text">A majestic row of richly caparisoned elephants stands in ceremonial grandeur, their ornate golden head-dresses and vibrant decorations creating a spectacular visual procession.</p>
+              <a href="https://wikitravel.org/upload/shared/d/d8/Thrissur_Banner.jpg" class="btn btn-primary" aria-label="source Wikitravels" target="_blank">Source:Wikitravels</a>
+            </div>
+          </div>
+          </div></div>
+      </section>
+      <section class="container-fluid mt-3">
+        <div class="row justify-content-around align-items-center">
+        <div class="container-sm col-md-6" id="section3">
+          <h2>3. Eid-ul-Fitr</h2>
+          <p>
+            Eid-ul-Fitr is celebrated with profound joy marking the end of Ramadan's month of fasting. The day begins with special prayers at mosques and idgahs, where worshippers gather in clean traditional attire. A distinctive Kerala tradition is the preparation of special festive snacks like khaliat nahal (sweet bread rolls) and unniyappam alongside biryani feasts. What makes Kerala's celebration unique is its secular character—people of all faiths exchange greetings and share meals, reflecting the state's multicultural ethos. The festival emphasizes charity (zakat al-fitr), ensuring even the less fortunate participate in the celebrations, reinforcing Kerala's model of religious coexistence and social solidarity.
+          </p>
+        </div>
+
+        <div class="container-sm col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="Images/vavarpalli_mosque.jpg" alt="Vavar-palli mosque at Erumely">
+            <div class="card-body">
+              <h3 class="card-title">Vavar mosque at Erumely</h3>
+              <p class="card-text">Legends say that Vavar (Vavarswami) a Hanafi Rowther, was a friend of lord Ayappa. Pilgrims <em>enroute</em> to <b>Sabarimala</b>, stay in this mosque and perform a ritual called <em>pettathullal</em>.</p>
+              <a href="https://www.flickr.com/photos/dinesh_valke/397445896/" class="btn btn-primary" aria-label="By Dinesh @Flikr" target="_blank">By:Dinesh @Flickr </a>
+              <a href="https://creativecommons.org/licenses/by-sa/2.0/" class="card-link" aria-label="
+Attribution-ShareAlike 2.0 Generic Deed" target="_blank"><img class=card-img src="Images/CC_By_2_license_250x30.png" alt="Creative commons sharealike 2 license " style="width: 150px"></a>
+            </div>
+          </div>
+          </div></div>
+      </section>
+      <section class="container-fluid mt-3">
+        <div class="row justify-content-around align-items-center">
+        <div class="container-sm col-md-6 order-md-2" id="section4">
+          <h2>4. Christmas</h2>
+          <p>
+            Kerala's Christmas celebrations blend ancient Syrian Christian traditions with local cultural elements, creating a uniquely Malayali festive experience. The season begins with advent prayers and culminates in midnight Mass on Christmas Eve, where churches glow with countless oil lamps and star-shaped lanterns. A distinctive Kerala tradition is the nercha feasts—community meals organized by churches where people of all faiths join celebrations. Homes display beautiful kuri nativity scenes and women create intricate kolam rice flour designs at entrances. The air fills with the scent of traditional treats like achappam and kul-kuls alongside cake. In coastal areas, fishing boats decked with colorful lights create spectacular processions, reflecting Kerala's harmonious blend of faith and local culture.
+          </p>
+        </div>
+
+        <div class="container-sm col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="Images/Christmas_decorations_shop.png.png" alt="Christmas decorations at a shop">
+            <div class="card-body">
+              <h3 class="card-title">Chirstrams decorations</h3>
+              <p class="card-text">Chirstmas decoration articles displayed at a shop in Kochin, inlcuding the santaclauz attire, and chirstmas star lantern.</p>
+              <a href="https://www.flickr.com/photos/mckaysavage/2077712791/in/album-72177720296441920" class="btn btn-primary" aria-label="By McKay Savage @Flikr" target="_blank">By:McKay Savage @Flickr </a>
+              <a href="https://creativecommons.org/licenses/by/2.0/#ref-appropriate-credit" class="card-link" aria-label="
+Attribution 2.0 Generic Deed" target="_blank"><img class=card-img src="Images/CC_By_2only_license_150x30.png" alt="Creative commons 2 license" style="width: 150px"></a>
+            </div>
+          </div>
+          </div></div>
+      </section>
+      
+      <section class="container-fluid mt-3" aria-label="comment-section" id="sectionComment">
+        <hr class="col-12" id="firstRuler">
+        <form action="/action_page.php">
+          <div class="mb-3 mt-3">
+            <label for="commentBox">
+              <img class="label-bg" src="My_created_icons/my_share_comment.svg" alt=""> <span class="label-text">Share
+                your comments:</span>
+            </label>
+            <textarea id="commentBox" class="form-control rounded-3" rows="5" name="text"
+              placeholder="your comment..."></textarea>
+          </div>
+          <input id="CommentSubmitBtn" type="button" class="btn btn-primary" value="Submit"> <button type="reset"
+            class="btn btn-danger">Clear</button>
+        </form>
+        <div class="toast">
+          <div class="toast-header">
+            <button type="button" class="btn-close btn-close-custom" aria-label="Close"
+              data-bs-dismiss="toast"></button>
+          </div>
+          <div class="toast-body">
+            <img src="Images/Google_noto_folded_hand_emoji_1f64f.gif" alt="thank you emoji">
+            <p>Thank you for your comment!</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="container-fluid mt-3 quick-actions">
+    <div id="quicActionsRow" class="row">
+      <div class="col-3 text-center">
+        <button type="button" class="btn" title="copy">
+          <img src="My_created_icons/my_emptyCopyICon.svg" alt="copy" class="copy-normal" title="copy text"><img
+            src="My_created_icons/my_fillCopyIcon.svg" alt="copied" class="copy-active"> </button>
+      </div>
+      <div class="col-3 text-center"><button type="button" class="btn" title="like">&#128077;</button></div>
+      <div class="col-3 text-center">
+        <button type="button" class="btn" title="share"><img src="Icons/share-fill-cream.svg" alt="share"></button>
+      </div>
+      <div class="col-3 text-center">
+        <button type="button" class="btn" title="home-goto-top">
+          <img src="My_created_icons/my_home_goToTop.svg" alt="go to top" class="homeGoToTop-normal"><img
+            src="Icons/house-fill-cream.svg" alt="came to home" class="home-active"> </button>
+      </div>
+    </div>
+  </div>
+    
+  <!--pagination divs-->
+  <div class="container-fluid mt-3">
+    <div class="row justify-content-center">
+      <div class="col-auto" id="pagination"></div>
+    </div>
+  </div>
+  <!--Footer menu accordion-->
+  <footer class="footer accordion-flush mt-0 py-0">
+    <div class="accordion my-custom-accordion" id="footerAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="copyright">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#copyrightContent"
+            aria-expanded="true" aria-controls="copyrightContent">
+            @Copyright
+          </button>
+        </h2>
+        <div id="copyrightContent" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+          <div class="accordion-body">
+            @Copyright: 2025-2030
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="disclaimer">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#disclaimerContent" aria-expanded="false" aria-controls="disclaimerContent">
+            Disclaimer
+          </button>
+        </h2>
+        <div id="disclaimerContent" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+          <div class="accordion-body">
+            <p><b><em>Disclaimer:</em></b>This page was created by an Anonymous student based on the guidance and extellent
+              mentoring by <a href="https://www.si.umich.edu/people/colleen-van-lent">Dr. Colleen van Lent</a> for the
+              <a href="https://www.coursera.org/specializations/web-design"><b> Web Design for Everybody</b></a>.Anyone
+              interested in learning web-design is encouraged to learn from it.
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="credits">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#creditsContent" aria-expanded="false" aria-controls="creditsContent">
+            Credits
+          </button>
+        </h2>
+        <div id="creditsContent" class="accordion-collapse collapse" 
+          data-bs-parent="#footerAccordion">
+          <div class="accordion-body">
+            <blockquote class="blockquote-footer">Coursera <a href="https://www.coursera.org/specializations/web-design/" aria-label="Coursera webdesign course" target="_blank" rel="noopener noreferrer">WdFE course</a> by Michighan University.</blockquote>
+            <blockquote class="blockquote-footer"><a href="https://lokeshdhakar.com/projects/lightbox2/" aria-label="Lightbox 2  by Lokesh Dhakar" target="_blank" rel="noopener noreferrer">LIGHTBOX</a> by Lokesh Dhakar &copy; <a href="https://raw.githubusercontent.com/lokesh/lightbox2/master/LICENSE" aria-label="MIT license" target="_blank" rel="noopener noreferrer">MIT license.</a> </blockquote>
+            <blockquote class="blockquote-footer"><a href="https://www.keralatourism.org" aria-label="Kerala Tourism dot org" target="_blank" rel="noopener noreferrer">&copy; Kerala tourism</a> All carousel images were taken from Kerala tourism.org website.</blockquote>
+            <blockquote class="blockquote-footer"><a href="https://www.pexels.com/" aria-label="Pexels.com" target="_blank" rel="noopener noreferrer">&copy; Pexels.com</a> and <a href="https://www.flickr.com/" aria-label="Flicr.com" target="_blank" rel="noopener noreferrer">&copy; Flickr.com</a>. All free images taken from these two websites have been adqeuately given credits at respective places.</blockquote>
+            <blockquote class="blockquote-footer">A few images were taken from <a href="https://www.wikipedia.org/" aria-label="Wikipedia.org" target="_blank">Wikipedia.org</a> and <a href="https://commons.wikimedia.org/wiki/Main_Page" aria-label="Wikimedia commons dot org" target="_blank" rel="noopener noreferrer">Wikimedia commons</a>. All the images were adequately given credits at respective places.</blockquote>
+            <blockquote class="blockquote-footer">Wood-texture image for border in card, is by <a href="https://pixabay.com/users/indigo432-4156390/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1943836" target="_blank" aria-label="Indigo432">Indigo432</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1943836" aria-label="Pixabay" target="_blank">Pixabay</a></blockquote>
+            
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="contactUs">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#contactInfo" aria-expanded="false" aria-controls="contactInfo">
+            Contact us
+          </button>
+        </h2>
+        <div id="contactInfo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+          <div class="accordion-body">
+            To contact please fill up the signup fom or login to see the contact information or click on the social
+            media icons.
+            <div class="row justify-content-center mt-3">
+              <div class="col-3 text-center">
+                <button type="button" class="btn" title="Facebook">
+                  <img src="Icons/facebook.svg" alt="Facebook"> </button>
+              </div>
+              <div class="col-3 text-center">
+                <button type="button" class="btn" title="Instagram">
+                  <img src="Icons/instagram.svg" alt="Instagram"> </button>
+              </div>
+              <div class="col-3 text-center">
+                <button type="button" class="btn" title="WhatsApp">
+                  <img src="Icons/whatsapp.svg" alt="WhatsApp"> </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CSS badge goes here, outside accordion but inside footer -->
+  <div class="text-center mt-3">
+    <p>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!">
+      </a>
+    </p>
+  </div>
+
+  </footer>
+  <!--modal div for login signup form-->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title" id="loginModalLabel">Login / Sign Up</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="userName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="userName" placeholder="Enter your full name" required>
+              </div>
+              <div class="mb-3">
+                <label for="userEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="userEmail" placeholder="Enter your email" required>
+              </div>
+              <!-- Buttons in a row -->
+              <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary flex-fill">Submit</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+              </div>
+            </form>
+          <!-- Accessibility instructions -->
+            <div class="mt-3 p-2 bg-light rounded small">
+              <strong>Accessibility:</strong> Press ESC key or click your name button at any time to <b>logout</b> if you're logged in.
+            </div>
+        </div>
+        <div class="modal-footer">
+            <small class="text-muted">We'll never share your information with anyone else.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Offcanvas Navigator -->
+  <div class="offcanvas offcanvas-bottom custom-offcanvas h-auto" id="sectionNavigator" aria-modal="true" role="dialog">
+    <div class="offcanvas-header" data-bs-theme="dark">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close" title="close section navigator"></button>
+    </div>
+    <div class="offcanvas-body d-flex justify-content-evenly">
+
+      <!-- Title/Main -->
+      <a href="#main" class="dot-item text-decoration-none text-center" aria-label="Jump to main section">
+        <span class="dot"></span>
+        <span class="dot-label">Title</span>
+      </a>
+
+      <!-- Section 1 -->
+      <a href="#section1" class="dot-item text-decoration-none text-center" aria-label="Jump to Onam section">
+        <span class="dot"></span>
+        <span class="dot-label">Onam</span>
+      </a>
+
+      <!-- Section 2 -->
+      <a href="#section2" class="dot-item text-decoration-none text-center" aria-label="Jump to Thrissue Pooram section">
+        <span class="dot"></span>
+        <span class="dot-label">Thrissur Pooram</span>
+      </a>
+
+      <!-- Section 3/Eid-ul-Fitr section -->
+      <a href="#section3" class="dot-item text-decoration-none text-center" aria-label="Jump to Eid-ul-Fitr section">
+        <span class="dot"></span>
+        <span class="dot-label">Eid-ul-Fitr</span>
+      </a>
+      
+      <!-- Section 4/Christmas section -->
+      <a href="#section4" class="dot-item text-decoration-none text-center" aria-label="Jump to Christmas section">
+        <span class="dot"></span>
+        <span class="dot-label">Christmas</span>
+      </a>
+      
+      <!-- Comment section -->
+      <a href="#sectionComment" class="dot-item text-decoration-none text-center" aria-label="Jump to Comment box">
+        <span class="dot"></span>
+        <span class="dot-label">Comment</span>
+      </a>
+
+    </div>
+  </div>
+  <button class="btn position-fixed d-block" data-bs-toggle="offcanvas" data-bs-target="#sectionNavigator" id="offcampusButtonRight" aria-label="Open section navigation" aria-controls="sectionNavigator" title="Click to open section navivtor">
+  <img src="My_created_icons/my_right_arrow_fil_circle.svg" alt="Section-Navigtor">
+  </button>
+  
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <script src="JS/lightbox-plus-jquery.min.js"></script>
+
+  <script src="JS/my_js_8_mylighbox2_modification.js"></script>
+  <script src="JS/my_js_1_navbar.js"></script>
+  <script src="JS/my_js_2_searchBox.js"></script>
+  <script src="JS/my_js_3_login_modal.js"></script>
+  <script src="JS/my_js_4_carousel.js"></script>
+  <script src="JS/my_js_5_comment_section_action_icons.js"></script>
+  <script src="JS/my_js_6_pagination_footer.js"></script>
+  <script>document.getElementById("pagination").innerHTML = renderPagination("2");</script>
+  <script src="JS/my_js_7_section_navigator.js"></script>
+  
+  <script src="JS/my_js_9_main_parallax.js"></script>
+
+
+</body>
+
+</html>
+

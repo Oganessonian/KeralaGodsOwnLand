@@ -1,0 +1,124 @@
+/*body, lightbox also*/
+
+body{
+    
+    background-color: #f0f0f0;
+    color: hsl(236, 100%, 3%);
+    font-size: 1.3rem;
+    border: solid 5px black;
+}
+main{
+    background-color: hsl(34, 78%, 95%)
+}
+h1 {
+    font-family: "Source Sans Pro", "Arvo", sans-serif;
+    color: hsl(120, 93%, 11%);
+    text-align: center;
+}
+h2 {
+    font-family: "Source Sans Pro", "Arvo", sans-serif;
+    color: hsl(25, 78%, 15%);
+}
+#jumbo h2{
+    color: #ffffff;
+}
+
+#jumboHome{
+    background-color: #1924ff !important;
+}
+#jumboFestivals{
+    background-color: brown !important;
+}
+
+
+.card {
+    border: 15px solid transparent;
+    border-image: url('../Images/wood_texture_640.png') 30 round;
+    box-shadow: -5px 5px 25px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    background: #f5f5dc;
+}
+.card-body h3{
+    border: 5px solid hsl(204, 73%, 55%);
+    padding: 2px;
+    font-size: 1.4rem;;
+}
+.card-body p {
+    font-size: 1.1rem;
+}
+.skip {
+    position: absolute;
+    top: -9999px;
+    left: 10px;
+    color: #00008b !important;
+    font-weight: bold;
+    z-index: 2;
+    
+}
+
+.skip:focus {
+    position: relative;
+    top: 0;
+}
+
+.skip-trigger {
+    position: fixed;
+    /*border: solid 5px red;*/
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 30px;
+    transition: width 0.3s ease, transform 0.3s ease;  
+    transition-delay: 30s; /* Huge delay - never returns */
+}
+
+.skip-trigger:hover {
+   transform: translateX(-600px);
+   width: 0;
+   transition-delay: 0s; /* Move immediately on hover */
+}
+.skip-trigger:hover ~ .skip,
+.skip:hover {
+    position: static;
+}
+
+/*Lightbox2 styling*/
+
+.lb-close:hover::after,
+.lb-prev:hover::after,
+.lb-next:hover::after {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.4rem 0.3rem;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    top: 50%;
+       
+}
+
+.lb-close:hover::after {
+    content: "Close";
+    position: relative;
+    top: 90%;
+    right: 50%;
+    display: inline-block;
+}
+
+.lb-prev:hover::after {
+    content: "Previous";
+    left: 50px;
+}
+
+.lb-next:hover::after {
+    content: "Next";
+    right: 50px;
+}
+
+.lb-next:hover::after, .lb-prev:hover::after{
+    position: absolute;
+    transform: translateY(-50%);
+    margin-top: -0.45rem;
+}
+
+

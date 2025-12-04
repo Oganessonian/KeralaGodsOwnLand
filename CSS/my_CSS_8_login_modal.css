@@ -1,0 +1,35 @@
+/*for login modal logout etc. */
+/* Modal styling */
+.modal-content {
+    border-radius: 5px;
+    border: none;
+    background-color: floralwhite;
+    
+}
+
+.modal-header {
+    border-radius: 20px 20px 0 0;
+}
+
+/* Form fields */
+.form-control {
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.form-control:hover {
+    background-color: #d4edda;
+}
+
+.form-control:focus {
+    background-color: #d4edda;
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 10px;
+}

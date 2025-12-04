@@ -1,0 +1,155 @@
+
+/*below is the wild card just to check*/
+/*
+* {
+  border: 1px solid red; 
+}
+*/
+
+/*above is the wild card just to check*/
+
+.pc-header {
+    border: solid #000501;
+    background-color: #0e3415;
+}
+
+
+#pcMainHeading {
+  font-size: 3.5rem !important;
+  font-family: 'Georgia', 'Garamond', serif !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100%;
+  color: beige;
+}
+
+ .pc-image-col {
+    
+    display: grid;
+    grid-template: 1fr/1fr;
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: transform 0.8s ease-in-out, filter 0.6s ease-in-out 0.8s;
+   
+    
+  }
+  .pc-image-col img {
+    position: static;
+    grid-area: 1/1;
+    width: 18.0rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    min-height: 1vh;
+    min-width: 1vw;
+    background-color: #2ccc9c;
+    padding: 5px;
+    border: 4px solid hsl(250, 70%, 15%);
+  }
+.pc-image-col .img-above {
+  z-index: 2;
+  opacity: 1; /* Fully visible by default */
+  transition: opacity 0.6s ease-in-out; 
+}
+
+.pc-image-col:hover .img-above {
+  cursor: pointer;
+  opacity: 0.2; /* Becomes 80% transparent (20% opaque) */
+}
+/* Keyframes for the vibration effect */
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply the vibration animation on hover */
+.pc-image-col:hover {
+  animation: vibrate 0.4s ease-in-out; /* Same duration as the blink */
+  filter: hue-rotate(90deg) saturate(1.5);
+  transform: scale(1.1);
+}
+.pc-image-col.force-reset {
+  animation: none !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+.pc-image-col.force-reset .img-above {
+  opacity: 1 !important;
+}
+
+
+/* Hide PC layout on mobile/tablet */
+@media (max-width: 1199.98px) {
+  #pcHeaderLayoutRow {
+    display: none !important;
+  }
+}
+
+/* Show PC layout on desktop */
+@media (min-width: 1200px) {
+  #pcHeaderLayoutRow {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Hide the original mobile image container */
+  #top_image_container {
+    display: none !important;
+  }
+   
+}
+
+
+
+@media (min-width: 1200px) {
+  
+  #mobileNavContainer .container-fluid {
+    justify-content: flex-start !important;
+    max-width: 40% !important; /* 5/12 = 48% */
+    padding: 0 2rem !important;
+  }
+  
+  #mobileTabletNavBar {
+    gap: 1rem;
+  }
+  
+  #mobileTabletNavBar > div:nth-child(2) { /* Search box */
+    flex: 0 0 80% !important;
+    max-width: 80% !important;
+  }
+  
+  #collapsibleNavbar {
+    flex: 1 1 60% !important; /* Locks navbar to 40% width */
+    margin-left: 0 !important;
+    justify-content: flex-start !important; /* Aligns menu to left */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .vertical-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    flex: 1 1 100% !important;
+    width:100% !important;
+    gap: 1.3rem; /* Increase gap between buttons */
+    margin-left: 0 !important;
+    margin-right: 2.0rem !important;
+    padding: 2px 16px !important; /* Remove padding: 6px 0 */
+    justify-content:space-evenly; 
+    
+  }
+  .vertical-menu .nav-link {
+    padding: 6px 16px !important; /* Reduce from 12px top/bottom to 6px */
+  }
+      
+}
+

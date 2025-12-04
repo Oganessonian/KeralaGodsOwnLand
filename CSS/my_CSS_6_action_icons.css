@@ -1,0 +1,93 @@
+#quicActionsRow {
+    background-color: hsl(131, 58%, 13%);
+}
+.quick-actions img {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: brightness(1) contrast(1.5);
+}
+
+.quick-actions button {
+    font-size: 1.5rem; /* For the emoji */
+}
+.copy-active {
+    display: none;
+}
+button.active .copy-normal {
+    display: none;
+}
+button.active .copy-active {
+    display: block;
+}
+
+/* Target the like button's emoji specifically to avoid WAVE error */
+button[title="like"] {
+    filter: brightness(0.9) contrast(1.5);
+}
+
+@keyframes thumbsUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3) translateY(-5px);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.like-animation {
+    animation: thumbsUp 0.5s ease-in-out;
+}
+
+@keyframes shareDone {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3) translateY(-5px);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.like-animation {
+    animation: shareDone 0.5s ease-in-out;
+}
+
+
+
+.home-active { display: none; }
+button.active .homeGoToTop-normal { display: none; }
+button.active .home-active { display: block; }
+
+
+@media (min-width: 1200px) {
+  .quick-actions {
+    position: fixed;
+    right: -100px; /* Start hidden off-screen */
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    z-index: 1000;
+    transition: right 0.5s ease; /* Smooth slide animation */
+  }
+    .quick-actions.visible {
+    right: 5px; /* Slide into view */
+  }
+  #quicActionsRow {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    
+  }
+  #quicActionsRow .col-3 {
+    width: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+  }
+    
+}
